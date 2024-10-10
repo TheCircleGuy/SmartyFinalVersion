@@ -17,8 +17,18 @@
 
 .logo {
     max-height: 80%;
-    padding-left: 10rem;
+    padding-left: 10rem; /* Default padding for larger screens */
 }
+
+@media (max-width: 768px) {
+    .logo {
+        padding-left: 0; /* Remove the left padding on smaller screens */
+        display: block;
+        margin: 0 auto; /* This will center the logo horizontally */
+        text-align: center; /* In case the logo is inline */
+    }
+}
+
 .cta-button-primary-menu, .cta-button-secondary {
     padding: 15px 30px;
     max-height: 50%;
@@ -160,6 +170,11 @@ body {
 
 /* Responsive layout for screens below 700px */
 @media (max-width: 700px) {
+
+    .cta-button-secondary{
+        display: none;
+    }
+
     .landing-section {
         flex-direction: column;
         padding: 10px;
@@ -352,7 +367,6 @@ body {
 .cta-button-secondary:hover {
     background-color: #f8f9fa;
 }
-
 .cta-icons {
     display: flex;
     justify-content: center;
@@ -378,6 +392,23 @@ body {
     font-weight: 500;
 }
 
+
+
+@media (max-width: 768px) {
+    .cta-icons {
+        padding-top: 1rem;
+        flex-direction: column;
+        align-items: flex-start; /* Aligns items left */
+        margin: 0 auto; /* Centers the items */
+        padding-left: 20%;
+    }
+
+    .cta-icon-item {
+        width: 100%; /* Ensures each item takes full width in its container */
+        text-align: left;
+        justify-content: flex-start; /* Keeps icons and text aligned left */
+    }
+}
 
 /* Video Section Styling */
 .video-section {
@@ -833,7 +864,7 @@ figure {
     margin-right: 10px;
 }
 
-/* Right Half: Boxes Styling */
+/* Right Half: Boxes Styling *//* Right Half: Boxes Styling */
 .right-half {
     flex: 1;
     padding-left: 20px;
@@ -845,12 +876,11 @@ figure {
     font-weight: 700;
     color: #333;
     margin-bottom: 20px;
-
 }
 
 .boxes-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
     gap: 20px;
 }
 
@@ -861,10 +891,12 @@ figure {
     padding: 20px;
     text-align: left;
     transition: transform 0.3s ease-in-out;
-    height: 150px; /* Square boxes */
+    min-height: 150px; /* Set a minimum height */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-grow: 1; /* Ensure all boxes grow to the same size */
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
 .info-box:hover {
@@ -884,6 +916,7 @@ figure {
     font-size: 14px;
     color: #555;
     line-height: 1.4;
+    flex-grow: 1; /* Allow text to take up available space */
 }
 
 .learn-more {
@@ -896,6 +929,38 @@ figure {
 .learn-more:hover {
     text-decoration: underline;
 }
+
+/* Responsive Design for Boxes */
+@media (max-width: 768px) {
+    .symmetrical-section {
+        flex-direction: column; /* Stack the two halves */
+        padding: 25px; /* Adjust padding for smaller screens */
+        align-items: stretch; /* Full width children in column layout */
+    }
+
+    .left-half, .right-half {
+        padding: 0; /* Remove extra padding */
+        width: 100%; /* Full width for stacked layout */
+    }
+
+    .boxes-container {
+        grid-template-columns: 1fr; /* Make boxes full width on smaller screens */
+    }
+}
+@media (max-width: 500px) {
+    .section-title {
+        font-size: 28px; /* Reduce title size on very small screens */
+    }
+
+    .text-title {
+        font-size: 18px; /* Smaller text size */
+    }
+
+    .text-subtitle, .text-point {
+        font-size: 14px; /* Smaller text for body content */
+    }
+}
+
 
 /* Responsive Design for "Why Smarty?" Section */
 @media (max-width: 768px) {
