@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #34c38f;
+    background-color: rgb(255, 255, 255);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 1rem;
     height: 5rem;
@@ -42,9 +42,8 @@
 }
 
 .cta-button-primary-menu {
-    background-color: #ffffff;
+    background-color: #54BF9F;
     color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 15px;
 }
 
 .cta-button-primary-menu:hover {
@@ -362,91 +361,71 @@ body {
 /* Container for the entire section */
 .dashboard-section {
     display: flex;
-    /* justify-content: space-between; */
-    align-items: center;
-    /* padding: 40px; */
-  
-    max-height: 40rem;
-    margin-bottom: 100px;
+    flex-direction: column; /* Adjust direction for better mobile layout */
+    align-items: center; /* Center items for a consistent look on all devices */
+    padding: 20px; /* Slightly reduce padding for smaller screens */
+    margin-bottom: 20px; /* Adjust margin to prevent cramping at the bottom */
+    max-height: 50rem;
 }
 
 /* Styling for the left image (the white card) */
 .left-card {
-    flex: 1;
+    width: 100%; /* Full width to accommodate smaller screens */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px; /* Add space between the image and the content */
 }
 
 .stats-image {
-    max-height: 100%;
+    max-width: 60%; /* Ensure the image is not larger than its container */
     height: auto;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
-    object-fit: contain; /* Keep the aspect ratio of the image */
+    
 }
+
 /* Styling for the right content */
 .right-content {
-    flex: 1;
+    width: 100%; /* Full width to use all available space */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* padding: 0 20px; */
-    max-width: 1000px;
-    margin-right: 5rem;
-    max-height: 100%;
+    align-items: center; /* Center content for a neat look */
+    text-align: center; /* Ensure text is centered in all resolutions */
 }
 
-.right-content h2 {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 32px;
-    font-weight: 900;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.right-content p {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 48px;
-    line-height: 1.5;
-    color: rgb(0, 0, 0);
-    margin-bottom: 30px;
-}
-.dashboard-title{
-    font-family: 'Varela Round', sans-serif;
-    font-size: 48px;
-    /* line-height: 1.5; */
-    color: rgb(255, 255, 255);
-    margin-bottom: 30px;
-    font-weight: 900;
+.dashboard-title {
+    font-size: 24px; /* Reduce font size for smaller screens */
+    margin-bottom: 10px; /* Reduce spacing to save space */
 }
 
 .dashboard-content {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 18px;
-    /* line-height: 1.5; */
-    color: rgb(0, 0, 0);
-    margin-bottom: 30px;
+    font-size: 16px; /* Ensure readability on small devices */
+    margin-bottom: 20px; /* Adjust spacing */
 }
+
 /* Styling for the button container */
 .button-container {
+    width: 100%; /* Full width to allow flexible button placement */
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 15px; /* Space between buttons */
+    flex-direction: column; /* Keep buttons stacked vertically in all viewports */
+    align-items: center; /* Center buttons to maintain consistency */
+    gap: 10px; /* Space between buttons */
+  
 }
 
 /* Styling for the green stroke buttons */
 .green-stroke-button {
     font-family: 'Varela Round', sans-serif;
     font-size: 16px;
-    padding: 10px 20px;
     border: 2px solid #1a7152;
     background-color: transparent;
     color: #34c38f;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    width: 100%; /* Make buttons take full width of the container */
+    margin-top: 2%;
+    min-width: 50%;
+    margin-right: 50%;
 }
 
 .green-stroke-button:hover {
@@ -455,116 +434,60 @@ body {
 }
 
 
-/* Responsive adjustments */
 @media (max-width: 950px) {
-    .dashboard-section {
-        flex-direction: column;
-        padding: 20px;
+    .left-card{
+        background: linear-gradient(to bottom, #34c38f, white 50%, white 100%);
+        padding-top: 5%;
+        padding-bottom: 5%;
     }
 
-    .right-content {
-        padding: 20px 0;
-        text-align: center;
+    .green-stroke-button {
+     
+        margin-top: 2%;
+        min-width: 50%;
+        margin-right: 0;
+    }
+}
+@media (min-width: 950px) {
+    .dashboard-section {
+        flex-direction: row; /* Return to row layout for wider screens */
+        justify-content: space-between; /* Space content appropriately */
+        padding: 40px;
+        margin-bottom: 100px;
+        background: linear-gradient(to bottom, #34c38f, white 50%, white 100%);
+    }
+
+
+
+    .left-card, .right-content {
+        flex: 1; /* Ensure both sides use available space efficiently */
+    }
+
+    .dashboard-title {
+        font-size: 48px; /* Increase font size for larger displays */
+        font-weight: 1200;
+        text-align: left;
+        padding-right: 25%;
+    }
+
+    .dashboard-content {
+        font-size: 18px;    
+        text-align: left;
+        padding-right: 25%;
     }
 
     .button-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-}
-/* Container for the entire section */
-.dashboard-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch; /* Stretch both sides to align */
-    padding: 40px;
-    /* background: linear-gradient(to bottom, #34c38f, white); */
-}
-
-/* Styling for the left image (the white card) */
-.left-card {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.stats-image {
-    max-height: 100%; /* Ensure the image takes up full height of the section */
-    height: auto;
-    border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
-    object-fit: contain; /* Keep the aspect ratio of the image */
-}
-
-/* Styling for the right content */
-.right-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 20px;
-    max-width: 500px;
-}
-
-/* Heading and paragraph styling */
-.right-content h2 {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 32px;
-    font-weight: 900;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.right-content p {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: white;
-    margin-bottom: 30px;
-}
-
-/* Styling for the button container */
-.button-container {
-    display: flex;
-    gap: 20px;
-}
-
-/* Styling for the green stroke buttons */
-.green-stroke-button {
-    font-family: 'Varela Round', sans-serif;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: 2px solid #34c38f;
-    background-color: transparent;
-    color: #34c38f;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.green-stroke-button:hover {
-    background-color: #34c38f;
-    color: white;
-}
-
-/* Responsive adjustments */
-@media (max-width: 950px) {
-    .dashboard-section {
-        flex-direction: column;
-        padding: 20px;
+        flex-direction: row; /* Align buttons horizontally */
+        justify-content: center;
+        gap: 20px;
     }
 
-    .right-content {
-        padding: 20px 0;
-        text-align: center;
-    }
-
-    .button-container {
-        flex-direction: column;
-        gap: 15px;
+    .green-stroke-button {
+        width: auto; /* Revert to content-based width */
+        padding: 10px 20px; /* Restore padding */
     }
 }
+
 
 /* New Section for Header and Subtitle */
 .skills-section {
@@ -677,6 +600,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 50px 0;
+    /* padding-top: 5%; */
 }
 
 /* Video Card (Container) */
@@ -859,7 +783,7 @@ body {
     margin-top: 10rem;
     text-align: center;
     padding: 50px 20px;
-    background-color: #54BF9F;
+    background-color: #2d945b;
 }
 
 .form-title {
