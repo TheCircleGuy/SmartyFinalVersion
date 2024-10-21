@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #34c38f;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 1rem;
     height: 5rem;
@@ -42,7 +42,7 @@
 }
 
 .cta-button-primary-menu {
-    background-color: #54BF9F;
+    background-color: #ffffff;
     color: #fff;
 }
 
