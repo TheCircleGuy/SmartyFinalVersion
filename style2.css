@@ -260,7 +260,7 @@ body {
 /* Text styling inside the boxes */
 .at-icon-box-text {
    font-family: "Advent Pro", sans-serif;
-    font-weight: 900;
+    /* font-weight: 900; */
     color: #333;
     text-align: center;
     width: 100%;
