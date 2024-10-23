@@ -34,7 +34,7 @@
     max-height: 50%;
     font-size: 16px;
     border-radius: 25px;
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     cursor: pointer;
     font-weight: 700;
     text-align: center;
@@ -47,7 +47,7 @@
 }
 
 .cta-button-primary-menu:hover {
-    background-color: #adf0db;
+    background-color: #b5ffe8;
 }
 .nav-list {
     list-style: none;
@@ -112,7 +112,7 @@
 }
 
 body {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
 }
 /* Default layout for larger screens */
 .landing-section {
@@ -133,6 +133,7 @@ body {
     font-size: 48px;
     font-weight: bold;
     color: #000;
+    font-family: "Orbitron", sans-serif;
 }
 
 .subtitle {
@@ -258,7 +259,7 @@ body {
 
 /* Text styling inside the boxes */
 .at-icon-box-text {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-weight: 900;
     color: #333;
     text-align: center;
@@ -396,6 +397,7 @@ body {
 .dashboard-title {
     font-size: 24px; /* Reduce font size for smaller screens */
     margin-bottom: 10px; /* Reduce spacing to save space */
+    font-family: "Orbitron", sans-serif;
 }
 
 .dashboard-content {
@@ -415,7 +417,7 @@ body {
 
 /* Styling for the green stroke buttons */
 .green-stroke-button {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 16px;
     border: 2px solid #1a7152;
     background-color: transparent;
@@ -498,7 +500,7 @@ body {
 }
 
 .skills-header {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 48px;
     font-weight: 900;
     color: #000;
@@ -506,7 +508,7 @@ body {
 }
 
 .skills-subtitle {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 18px;
     font-weight: 400;
     color: #555;
@@ -526,7 +528,7 @@ body {
     padding: 15px 30px;
     font-size: 16px;
     border-radius: 5px;
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     cursor: pointer;
     font-weight: 700;
     text-align: center;
@@ -561,7 +563,7 @@ body {
 .cta-icon-item {
     display: flex;
     align-items: center;
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     color: #333;
 }
 
@@ -638,7 +640,7 @@ body {
 }
 
 .industry-problems-title {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 48px;
     font-weight: 900;
     color: #2d945b; /* Green color */
@@ -760,7 +762,7 @@ body {
 }
 
 .section-main-title {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 48px;
     font-weight: 900;
     color: #2d945b; /* Green color */
@@ -769,7 +771,7 @@ body {
 }
 
 .section-description {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 16px;
     color: #777;
     margin-bottom: 40px;
@@ -783,11 +785,11 @@ body {
     margin-top: 10rem;
     text-align: center;
     padding: 50px 20px;
-    background-color: #2d945b;
+    background-color: #54BF9F;
 }
 
 .form-title {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: white;
@@ -795,10 +797,10 @@ body {
 }
 
 .form-subtitle {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 18px;
     font-weight: 600;
-    color: #2d945b;
+    color: #000000;
     margin-bottom: 30px;
 }
 
@@ -811,7 +813,7 @@ body {
 }
 
 .form-input {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     padding: 10px;
     font-size: 14px;
     border: 1px solid #54BF9F;
@@ -825,10 +827,10 @@ body {
 }
 
 .form-submit {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     padding: 10px 20px;
     font-size: 14px;
-    background-color: #54BF9F;
+    background-color: #ffffff;
     color: black;
     border: none;
     border-radius: 5px;
@@ -916,12 +918,12 @@ figure {
 }
 
 .section-title {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 36px;
     font-weight: 900;
-    color: #2d945b;
+    color: #34c38f;
     text-align: center;
-    margin-bottom: 5rem; /* Adds space below the title */
+    margin-bottom: 5rem;
     padding-top: 5rem;
 }
 /* Why Smarty Section */
@@ -957,10 +959,10 @@ figure {
 
 /* Title Styling */
 .section-title {
-    font-family: 'Varela Round', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 36px;
     font-weight: 900;
-    color: #2d945b;
+    color: #34c38f;
     text-align: center;
     margin-bottom: 5rem; /* Adds space below the title */
     padding-top: 5rem;
@@ -973,7 +975,7 @@ figure {
 }
 
 .left-subtitle {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: #333;
@@ -993,7 +995,7 @@ figure {
 }
 
 .text-title {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 20px;
     font-weight: bold;
     color: #000;
@@ -1056,7 +1058,7 @@ figure {
 }
 
 .right-subtitle {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 24px;
     font-weight: 700;
     color: #333;
@@ -1089,7 +1091,7 @@ figure {
 }
 
 .info-box h4 {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 20px;
     font-weight: bold;
     color: #333;
@@ -1097,7 +1099,7 @@ figure {
 }
 
 .info-box p {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 14px;
     color: #555;
     line-height: 1.4;
@@ -1105,7 +1107,7 @@ figure {
 }
 
 .learn-more {
-    font-family: 'Varela Round', sans-serif;
+   font-family: "Advent Pro", sans-serif;
     font-size: 14px;
     color: #007bff;
     text-decoration: none;
