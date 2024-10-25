@@ -5,8 +5,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #34c38f;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #67bfa4;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 1rem;
     height: 5rem;
     position: sticky;
@@ -223,8 +223,7 @@ body {
     }
 }
 /* Styling for the box section */
-/* Adjusted gap between the boxes */
-.box-section {
+/* Adjusted gap between the boxes */.box-section {
     display: flex;
     justify-content: space-between;
     padding: 100px;
@@ -255,37 +254,16 @@ body {
     padding: 30px;
     position: relative;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for hover effect */
 }
 
-
-
-/* Text styling inside the boxes */
-.at-icon-box-text {
-   font-family: "Urbanist", serif;
-    font-weight: 600;
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    width: 100%;
-    position: relative;
+/* Hover Effect */
+.col_fourth:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-
-
-/* Number styling - positioned in the top right */
-/* .at-icon-box-text h4 {
-    font-size: 48px;
-    margin: 0;
-    color: white;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 2px;
-    margin-right: 10px;
-    margin-bottom: 5rem;
-    
-} */
-.numbertop{
+.numbertop {
     font-size: 68px;
     font-style: bold;
     margin: 0;
@@ -294,9 +272,9 @@ body {
     top: 0;
     right: 0;
     padding-right: 5%;
-   
 }
-.numbertop2{
+
+.numbertop2 {
     font-size: 56px;
     font-style: bold;
     margin: 0;
@@ -305,7 +283,17 @@ body {
     top: 0;
     right: 0;
     padding-right: 22%;
-   
+}
+
+/* Text styling inside the boxes */
+.at-icon-box-text {
+    font-family: "Urbanist", serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    width: 100%;
+    position: relative;
 }
 
 /* Styling for the paragraph */
@@ -326,18 +314,19 @@ body {
 /* Responsive adjustments for smaller screens */
 @media (max-width: 950px) {
 
-    .numbertop2{
+    .numbertop2 {
         padding-right: 26%;
     }
-    .numbertop{
+
+    .numbertop {
         padding-right: 2%;
-           }
+    }
+
     .box-section {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
         grid-gap: 20px;
         padding: 20px;
-        
     }
 
     .col_fourth {
@@ -349,7 +338,6 @@ body {
 
     .at-icon-box-text h4 {
         font-size: 48px;
-        
     }
 
     .at-icon-box-text p {
@@ -357,6 +345,7 @@ body {
         padding-top: 25%;
     }
 }
+
 
 
 .gameify-and-video{
@@ -609,19 +598,17 @@ body {
         justify-content: flex-start; /* Keeps icons and text aligned left */
     }
 }
-
 /* Video Section Styling */
 .video-section {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 50px 0;
-    /* padding-top: 5%; */
 }
 
 /* Video Card (Container) */
 .video-card {
-    background-color: #fff;
+    background-color: #ffffff;
     width: 80%;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -630,7 +617,49 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    transition: box-shadow 1s ease; /* Transition for box-shadow */
 }
+
+.video-card:hover {
+    box-shadow: 0 4px 20px rgba(146, 243, 191, 0.9);
+}
+
+/* Video Thumbnail */
+.video-thumbnail {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    aspect-ratio: 4 / 2;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.play-button {
+    position: absolute;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, opacity 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.play-button:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
 
 /* Video Frame Styling */
 .video-frame {
@@ -642,12 +671,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-
     .video-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
         margin-top: 30%;
     }
     
@@ -655,6 +679,7 @@ body {
         display: none; /* Hide the picture on smaller screens */
     }
 }
+
 
 /* General Styles for the Section */
 .industry-problems-section {
@@ -812,7 +837,7 @@ body {
 }
 
 .form-title {
-    font-size: 48px;
+    font-size: 24px;
     font-family: "Anta", serif;
     font-weight: 700;
     color: white;
@@ -1235,31 +1260,27 @@ figure {
     transform: rotate(-135deg);
   }
 
-
   .challenge-section {
     background: linear-gradient(to top, #bff1de, white 100%, white 10%);
-    
-    margin-top: 10%;
-    /* background: #cde7d8; */
     padding: 20px;
     text-align: center;
-  }
-  
-  .challenge-title {
+}
+
+.challenge-title {
     font-family: "Anta", serif;
     color: #333;
     font-size: 48px;
     margin-bottom: 5%;
-  }
-  
-  .challenge-list {
+}
+
+.challenge-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px; /* Reduced gap between boxes */
-  }
-  
-  .challenge-block {
+    gap: 100px;
+}
+
+.challenge-block {
     flex: 1 1 30%;
     background: #ffffff;
     border-radius: 10px;
@@ -1268,55 +1289,74 @@ figure {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 300px; /* Ensures the boxes are taller */
+    min-height: 300px;
     max-width: 250px;
-  }
-  
-  .challenge-icon {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+/* Hover Effect */
+.challenge-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+}
+
+.challenge-icon {
     font-size: 48px;
     color: white;
     margin-bottom: 10px;
-    width: 80px; /* Set a fixed width for the circle */
-    height: 80px; /* Set a fixed height for the circle */
-    background-color: #55C09F; /* Color of the circle */
-    border-radius: 50%; /* Make it circular */
+    width: 80px;
+    height: 80px;
+    background-color: #55C09F;
+    border-radius: 50%;
     display: flex;
-    justify-content: center; /* Center the icon horizontally */
-    align-items: center; /* Center the icon vertically */
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease;
 }
 
-  
-  .challenge-block p {
+/* Rotate effect for icon on hover */
+.challenge-block:hover .challenge-icon {
+    transform: rotate(20deg);
+}
+
+.challenge-block p {
     margin-top: 0.5rem;
     color: #333;
     font-size: 24px;
     text-align: center;
-  }
-  
-  @media (max-width: 768px) {
+    transition: color 0.4s ease;
+}
+
+/* Change text color on hover */
+.challenge-block:hover p {
+    color: #55C09F;
+}
+
+@media (max-width: 768px) {
     .challenge-list {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .challenge-block {
-      width: 100%; /* Full width on smaller screens */
-      margin-bottom: 10px; /* Smaller margin on smaller screens */
+        width: 100%;
+        margin-bottom: 10px;
     }
-  }
-  
+}
+
   .features-section {
     /* background: #E0F2F1; */
     padding: 40px;
     text-align: center;
-  }
-  
-  .section-title {
+}
+
+.section-title {
     color: #00695C;
-    font-size: 32px;
+    font-size: 48px;
     margin-bottom: 30px;
-  }
-  
-  .feature {
+}
+
+.feature {
     background: #55C09F;
     color: #ffffff;
     margin: 20px auto;
@@ -1324,59 +1364,66 @@ figure {
     width: 40%; /* Adjust the width as needed */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 77, 64, 0.3);
-  }
-  
-  .feature h3 {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.feature:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 12px rgba(0, 77, 64, 0.4);
+}
+
+.feature h3 {
     color: #fefefe;
     font-size: 24px;
     font-family: "Anta", serif;
-  }
-  
-  .feature p {
+}
+
+.feature p {
     font-size: 18px;
     margin-top: 10px;
     font-family: "Urbanist", serif;
-  }
+}
 
-
-  @media (max-width: 1024px) {
+@media (max-width: 1024px) {
     .feature {
-      width: 60%; /* Slightly wider to fit medium screens better */
+        width: 60%; /* Slightly wider to fit medium screens better */
     }
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .features-section {
-      padding: 20px;
+        padding: 20px;
     }
     
     .feature {
-      width: 80%; /* Wider to fit better on small screens */
+        width: 80%; /* Wider to fit better on small screens */
     }
     
     .section-title, .feature h3 {
-      font-size: 28px; /* Smaller font size for smaller screens */
+        font-size: 28px; /* Smaller font size for smaller screens */
     }
     
     .feature p {
-      font-size: 16px; /* Smaller text in paragraphs for readability */
+        font-size: 16px; /* Smaller text in paragraphs for readability */
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .features-section {
-      padding: 10px;
+        padding: 10px;
     }
     
     .feature {
-      width: 100%; /* Full width for very small devices */
+        width: 100%; /* Full width for very small devices */
     }
     
     .section-title, .feature h3 {
-      font-size: 24px; /* Even smaller font size for very small screens */
+        font-size: 24px; /* Even smaller font size for very small screens */
     }
     
     .feature p {
-      font-size: 14px; /* Smaller text size to maintain readability */
+        font-size: 14px; /* Smaller text size to maintain readability */
     }
-  }
+}
+
